@@ -14,6 +14,7 @@ Route::post('article/{article}/comment','CommentController@store');
 Route::post('comment/{comment}/best-comment','CommentController@best_comment');
 Route::get('comments','CommentController@index');
 Route::get('comment/{comment}', 'CommentController@show');
+Route::get('comment/{comment}/article','CommentController@show_article');
 Route::delete('comment/{comment}','CommentController@destroy');
 
 Route::fallback(function(){

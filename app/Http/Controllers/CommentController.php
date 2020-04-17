@@ -60,6 +60,10 @@ class CommentController extends Controller
         return response()->json(['message'=>'Success','data'=>$comment],200);
     }
 
+    public function show_article(Comment $comment){
+        return response()->json(['message'=>'Success','data'=>$comment->article],200);
+    }
+
 
     /**
      * Remove the specified resource from storage.
